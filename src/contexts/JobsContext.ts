@@ -8,5 +8,6 @@ export interface IJobsContext {
 
 export const JobsContext = createContext<IJobsContext>({
   jobs: [], 
-  add: (text: string) => {},
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  add: (_text: string) => {},
 });
