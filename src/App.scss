@@ -1,0 +1,148 @@
+@use './assets/styles/home';
+@use './assets/styles/nav';
+@import '@digi/arbetsformedlingen/dist/digi-arbetsformedlingen/fonts/src/fonts.css';
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  margin: 0 20px;
+}
+
+.hide {
+  display: none;
+}
+
+#digi-button {
+  background-color: #FFC436;
+  border-color: #FFC436;
+  color: #292929;
+}
+
+.occupation-container {
+  max-height: 75vh; 
+  width: 90vw;
+  overflow-y: auto; 
+  padding: 20px;
+}
+
+.occupation-box-accordion {
+  background-color: #f2f2f2;
+  color: #292929;
+  cursor: pointer;
+  padding: 20px;
+  margin: 0 0 10px 20px;
+  max-width: 100%;
+  min-height: fit-content;
+  border-radius: 10px;
+  text-align: left;
+  list-style-type: none;
+  transition: background-color 0.7s ease; 
+}
+
+.occupation-box-accordion > h4 {
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.occupation-box-accordion:hover {
+  background-color: #337CCF; 
+  color: #f2f2f2;
+}
+
+.occupation-box-accordion.active {
+  max-height: fit-content;
+  background-color: #f2f2f2;
+  color:#292929;
+  border: 1px solid black;
+}
+
+.competencies-container {
+  padding: 0 18px;
+  background-color: #f2f2f2;
+}
+
+.symbol {
+  position: realtive;
+  float: right;
+}
+
+.list-competency {
+  list-style-type: none;
+}
+
+nav {
+  position: sticky; 
+  top: 0; 
+  z-index: 1; 
+  display: block;
+
+}
+
+.sc-digi-typography-heading-jumbo-h .digi-typography-heading-jumbo.sc-digi-typography-heading-jumbo::after {
+  display: none;
+}
+
+.sc-digi-typography-heading-jumbo-h .digi-typography-heading-jumbo.sc-digi-typography-heading-jumbo {
+  color: #f2f2f2;
+  text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+  font-size: var(--digi--typography--heading-jumbo--font-size--desktop-large);
+  background-color: #2865ac;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+#digi-form-text-area {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; 
+  align-items: center;
+  padding: 20px;
+}
+
+.job-input-container {
+  margin-top: 1.5rem;
+}
+
+.nav-search-parent-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+  .nav-search-parent-container {
+    display: block;
+  }
+
+  .occupation-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px; 
+  }
+
+  .grid-2 {
+    background-color: #f2f2f2;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+
+}

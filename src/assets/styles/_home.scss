@@ -1,0 +1,35 @@
+.home-parent-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .home-container {
+        width: 90vw;
+        max-width: 470px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: left;
+        color: #f2f2f2;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+    }
+
+    .input-container {
+        border-radius: 10px;
+        background-color: #337ccf;
+    }
+
+    .sc-digi-button-h .digi-button .sc-digi-button-s > [slot^="icon"] {
+        --digi--icon--height: 1em;
+        --digi--icon--width: 1em;
+        --digi--icon--color: #292929;
+      }
+}

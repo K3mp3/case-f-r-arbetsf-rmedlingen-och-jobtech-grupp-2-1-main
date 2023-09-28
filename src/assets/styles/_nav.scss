@@ -1,0 +1,43 @@
+nav {
+    background-color: #337CCF;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    .nav-search-container {
+        max-width: 300px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .job-input-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .digi-form-input {
+        width: 300px;
+    }
+}
+
+@media (min-width: 900px) {
+    nav {
+        justify-content: start;
+        position: fixed;
+        top: 0;
+        height: 230px;
+
+        .nav-search-container {
+           gap: 10px;
+        }
+
+        .digi-form-text-area {
+            width: 300px;
+        }
+    }
+}
