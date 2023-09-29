@@ -9,7 +9,7 @@ import { TypographyVariation } from "@digi/arbetsformedlingen";
 export default function HomePage() {
   const [job, setJob] = useState<IJobsContext>({
     jobs: [],
-    add: () => {}, // Tar bort text: string i ();
+    add: () => {},
   });
 
   job.add = (text: string) => {

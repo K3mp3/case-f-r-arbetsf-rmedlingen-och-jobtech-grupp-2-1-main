@@ -46,7 +46,7 @@ export default function ShowMatchedJobs() {
       } else {
         setApiMatchByText(await showSecondSearch(textInput, areaInput));
       }
-      setError(null); // Clear any previous error
+      setError(null);
     } catch (error) {
       if (!error) {
         setError("An error occurred while fetching data.");
@@ -60,7 +60,6 @@ export default function ShowMatchedJobs() {
     }
   }, [error]);
 
-  // call fetchData when 'apiMatchedByText' changes
   useEffect(() => {
     fetchData();
   }, [fetchData]);
@@ -71,7 +70,6 @@ export default function ShowMatchedJobs() {
     }
   }
 
-  // call insertData when 'jobs' changes
   useEffect(() => {
     insertData();
   }, [jobs]);
@@ -101,10 +99,10 @@ export default function ShowMatchedJobs() {
 
   const handleToggleAccordion = (occupationId: string) => {
     if (occupationId === activeOccupationId) {
-      setActiveOccupationId(null); // Collapse the clicked accordion
+      setActiveOccupationId(null);
     } else {
-      setActiveOccupationId(occupationId); // Expand the clicked accordion
-      handleFetchRelatedCompetencies(occupationId); // Fetch related competencies
+      setActiveOccupationId(occupationId);
+      handleFetchRelatedCompetencies(occupationId);
     }
   };
 
@@ -114,7 +112,6 @@ export default function ShowMatchedJobs() {
   const occupationContainerRef = useRef<HTMLDivElement | null>(null);
 
   const handleLiClick = () => {
-    // Scroll to the top of the occupation-container when a li is clicked
     if (occupationContainerRef.current) {
       occupationContainerRef.current.scrollTop = 0;
     }
