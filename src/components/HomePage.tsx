@@ -1,9 +1,5 @@
 import { useState } from "react";
-//import { HomeContainer } from "./styled/HomeContainer";
-//import { Jobs } from "./styled/Jobs";
-//import { HomeParentContainer } from "./styled/HomeParentContainer";
 import HomePageInputs from "./HomePageInputs";
-//import { HomePageH1 } from "./styled/HomePageH1";
 import ShowMatchedJobs from "./ShowMatchedJobs";
 import { IJobsContext, JobsContext } from "../contexts/JobsContext";
 import { Job } from "./models/Jobs";
